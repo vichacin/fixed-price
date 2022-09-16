@@ -1,6 +1,6 @@
 {
-  "name": "service-example-universities",
-  "vendor": "vtex",
+  "name": "service-example-prices",
+  "vendor": "demofarma",
   "version": "0.0.1",
   "title": "Service Example",
   "description": "Reference app for VTEX IO Services",
@@ -25,10 +25,24 @@
     {
       "name": "outbound-access",
       "attrs": {
-        "host": "universities.hipolabs.com",
-        "path": "/*"
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/api/*"
       }
+    },
+    {
+      "name": "read_prices"
     }
   ],
+  "settingsSchema": {
+    "title": "Test",
+    "type": "object",
+    "properties": {
+      "testPayment": {
+        "title": "SAMPLE FIELD",
+        "description": "Enter the ID (GTM-XXXX) from your Google Tag Manager",
+        "type": "string"
+      }
+    }
+  },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

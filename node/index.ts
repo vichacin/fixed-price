@@ -2,7 +2,8 @@ import type { ClientsConfig, ServiceContext, RecorderState } from '@vtex/api'
 import { LRUCache, method, Service } from '@vtex/api'
 
 import { Clients } from './clients'
-import { demo } from './middlewares/demo'
+import { getPrices } from './middlewares/getPrices'
+
 
 const TIMEOUT_MS = 2000
 
@@ -44,8 +45,9 @@ export default new Service({
   clients,
   routes: {
     // `status` is the route ID from service.json. It maps to an array of middlewares (or a single handler).
-    demo: method({
-      GET: [demo],
+    
+    prices: method({
+      GET: [getPrices],
     }),
   },
 })
