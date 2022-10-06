@@ -18,8 +18,12 @@ export async function getPrices(ctx: Context, next: () => Promise<any>) {
 
   console.info('Status response:', response)
 
-  ctx.status = response.status
-  ctx.body = response.data
-
+  if (response.status === 200){
+    ctx.status = response.status
+    ctx.body = response.data
+  } else {
+    ctx.body = 'Error'
+  }
+  
   await next()
 }
