@@ -11,6 +11,7 @@
     "@vtex/api": "6.45.12",
     "@vtex/test-tools": "^1.0.0",
     "@vtex/tsconfig": "^0.5.6",
+    "tiendadevi.service-example-prices": "https://price--tiendadevi.myvtex.com/_v/private/typings/linked/v1/tiendadevi.service-example-prices@0.0.1+build1665504280/public/@types/tiendadevi.service-example-prices",
     "typescript": "3.9.7"
   },
   "scripts": {
